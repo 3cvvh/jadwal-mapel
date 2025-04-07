@@ -37,8 +37,8 @@ $hari = tampil("SELECT * FROM hari");
                 <tr class="hover:bg-gray-100">
                     <td class="border border-gray-300 px-4 py-2 text-center"><?php echo $i++; ?></td>
                     <td class="border border-gray-300 px-4 py-2 text-center">
-                        <a href="#" class="text-blue-500 hover:underline">Update</a> |
-                        <a href="#" class="text-red-500 hover:underline">Delete</a>
+                        <a href="update.php?id=<?php echo $h["id"]; ?>" class="text-blue-500 hover:underline">Update</a> |
+                        <a href="delete.php?id=<?php echo $h['id']?>" class="text-red-500 hover:underline">Delete</a>
                     </td>
                     <td class="border border-gray-300 px-4 py-2"><?php echo $h["senin"]; ?></td>
                     <td class="border border-gray-300 px-4 py-2"><?php echo $h["selasa"]; ?></td>
