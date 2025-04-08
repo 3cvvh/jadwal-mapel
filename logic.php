@@ -39,5 +39,14 @@ function delete($id){
     mysqli_query($db, "DELETE FROM hari WHERE id=$id");
     return mysqli_affected_rows($db);
 }
+function cari($search){
+    global $db;
+$query_search = "SELECT*FROM hari WHERE senin like '%$search%' OR selasa like '%$search%' OR rabu like '%$search%' OR kamis like '%$search%' OR waktu like '%$search%'";
+$resault = mysqli_query($db, $query_search);
+$row = [];
+while($rows = mysqli_fetch_assoc($resault)){
+    $row[]  = $rows;
+} return $row;
+}
 
 ?>
